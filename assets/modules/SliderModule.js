@@ -1,6 +1,7 @@
 
 var app=angular.module('appLabSlider', ['fox.scrollReveal','angular-parallax','slick','ksSwiper','ui.bootstrap','duScroll','angular.backtop','ng-backstretch','nate.util']);
 
+
 app.provider('Modernizr', function() {
     this.$get = function () {
         return Modernizr || {};

@@ -1,5 +1,16 @@
 
-app.controller('MyController', function ($scope,Modernizr,$window) {
+app.controller('MyController', function ($scope,Modernizr,$window, $http) {
+
+$scope.getData = function() {
+  console.log('hitted')
+  $http({
+    method: 'GET', 
+    url : 'http://www.mocky.io/v2/59d3da2e270000810107b204'
+  }).then(function resp(r) {
+      console.log(r)}, function gotError(e) {
+      console.log(`error is as follow : ${e}`);
+  });
+}
 
 $scope.sentences  = ["از تحویل یک روزه", "از مترجمین متخصص", "از قیمت مقرون به صرفه"];
 
